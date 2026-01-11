@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Capstone single-file web app (mini e‑commerce) — responsive, performant, cross-browser." />
+  <title>Capstone: Mini Shop</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="app" id="app">
+    <header>
+      <div class="brand">
+        <div class="logo">AP</div>
+        <div>
+          <h1>Capstone — Mini Shop</h1>
+          <div class="muted">A single-file demo: responsive, performant, cross-browser</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="search" role="search">
+          <input id="q" type="search" placeholder="Search products..." aria-label="Search products" />
+          <select id="sort" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+          </select>
+        </div>
+        <button id="open-cart" class="btn">Cart (<span id="cart-count">0</span>)</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section>
+        <div class="panel" style="margin-bottom:12px;">
+          <div class="flex" style="justify-content:space-between;align-items:center">
+            <div class="muted">Showing <strong id="result-count">0</strong> products</div>
+            <div class="muted">Tip: images lazy-load & IntersectionObserver</div>
+          </div>
+        </div>
+
+        <div id="product-list" class="products" aria-live="polite"></div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="panel">
+          <h3 style="margin:0 0 8px 0">Your Cart</h3>
+          <div id="cart-items" aria-live="polite"></div>
+          <div style="margin-top:8px;display:flex;justify-content:space-between;align-items:center">
+            <div class="muted">Total</div>
+            <div><strong id="cart-total">₹0</strong></div>
+          </div>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <button id="checkout" class="btn" style="flex:1">Checkout</button>
+            <button id="clear-cart" class="btn secondary">Clear</button>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-top:12px">
+          <h4 style="margin:0 0 8px 0">Performance & Compatibility</h4>
+          <ul class="muted" style="margin:0 0 0 16px;padding:0">
+            <li>Images lazy-loaded with IntersectionObserver</li>
+            <li>Minimal DOM updates & localStorage caching</li>
+            <li>Service worker ready (see code comments)</li>
+            <li>Responsive grid & CSS variables</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <div id="modal" role="dialog" aria-hidden="true" style="display:none;position:fixed;inset:0;background:rgba(4,8,20,0.4);align-items:center;justify-content:center;padding:24px">
+      <div style="background:#fff;padding:20px;border-radius:12px;max-width:520px;width:100%">
+        <h3>Checkout</h3>
+        <div id="checkout-body"></div>
+        <div style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end">
+          <button id="close-modal" class="btn secondary">Close</button>
+          <button id="confirm" class="btn">Confirm</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
