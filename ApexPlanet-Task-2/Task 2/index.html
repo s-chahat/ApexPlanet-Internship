@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Development Task</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+  <body>
+    <div class="navbar">
+      <nav class="nav1">
+        <ul>
+          <h1 class="gradient-text">ApexPlanet</h1>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#Services">Services</a></li>
+          <li><a href="#card">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container1">
+      <h1><strong>Welcome to My Website</strong></h1>
+      <p>This Webpage contains all the basic functionalities of HTML, CSS, and JavaScript.</p>
+      <a href="#card">Get in Touch</a>
+    </div>
+
+    <div class="about" id="about">
+      <h2>About Us</h2>
+      <p>We are passionate web developers helping people learn to build websites using HTML, CSS, and JavaScript.</p>
+      <p>Below is a table of our recent workshops:</p>
+    </div>
+
+    <div class="workshop-table">
+      <table>
+        <tr>
+          <th>Workshop</th>
+          <th>Date</th>
+          <th>Location</th>
+        </tr>
+        <tr>
+          <td>HTML Basics</td>
+          <td>June 2025</td>
+          <td>Noida</td>
+        </tr>
+        <tr>
+          <td>CSS Fundamentals</td>
+          <td>August 2025</td>
+          <td>Noida</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="Services" id="Services">
+      <h2>Our Services</h2>
+      <div class="class">
+        <div class="class1">
+          <h3>Web Design</h3>
+          <p>Clean and modern design layout using HTML & CSS.</p>
+        </div>
+        <div class="class1">
+          <h3>Frontend Development</h3>
+          <p>Responsive websites with HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="class1">
+          <h3>Training</h3>
+          <p>Workshops on web development for beginners.</p>
+        </div>
+      </div>
+    </div>
+
+      <div class="card" id="card">
+      <h2>Contact Us</h2>
+      <form class="content">
+        <label>Your Name:</label>
+        <input type="text" placeholder="Enter your Name" required />
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your Email" required />
+        <label>Subject:</label>
+        <input type="text" placeholder="Enter the Subject" />
+        <label>Message:</label>
+        <textarea rows="5" cols="40" placeholder="Write your message..."></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="todo-container">
+      <h2>My To-Do List</h2>
+      <input type="text" id="taskInput" placeholder="Add a new task" />
+      <button id="addTask">Add Task</button>
+      <ul id="taskList"></ul>
+    </div>
+
+    <footer>&copy; 2025 Your Website. All Rights Reserved.</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
